@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dalil Bounar — Portfolio</title>
+  <meta name="description"
+    content="Portfolio de Dalil Bounar, étudiant BTS SIO SLAM à l'IPSSI Paris, passionné par la Data, l'IA et le BI." />
+  <meta name="keywords" content="Dalil Bounar, portfolio, data, IA, BI, développeur, IPSSI, Paris" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">Dalil<span class="logo-dot">.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">À propos</a></li>
+        <li><a href="#skills" class="nav-link">Compétences</a></li>
+        <li><a href="#experience" class="nav-link">Expérience</a></li>
+        <li><a href="#education" class="nav-link">Formation</a></li>
+        <li><a href="#contact" class="nav-link nav-cta">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-noise"></div>
+    <div class="container hero-inner">
+
+      <div class="hero-label reveal-up">
+        <span class="status-dot"></span>
+        Disponible pour de nouvelles opportunités
+      </div>
+
+      <h1 class="hero-title reveal-up">
+        <span class="hero-line">Dalil</span>
+        <span class="hero-line hero-line-accent">Bounar<span class="title-mark">.</span></span>
+      </h1>
+
+      <div class="hero-sub reveal-up">
+        <div class="hero-roles">
+          <span class="role-chip active" id="r0">Data</span>
+          <span class="role-chip" id="r1">Intelligence Artificielle</span>
+          <span class="role-chip" id="r2">Business Intelligence</span>
+          <span class="role-chip" id="r3">Développement Web</span>
+        </div>
+      </div>
+
+      <p class="hero-desc reveal-up">
+        Étudiant en <strong>BTS SIO SLAM</strong> à l'IPSSI Paris &middot;
+        Stagiaire DSI <strong>Metro France</strong> &middot;
+        Passionné par la donnée, l'IA et la transformation numérique.
+      </p>
+
+      <div class="hero-actions reveal-up">
+        <a href="#experience" class="btn-primary" id="heroExpBtn">
+          Voir mon expérience
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+        <a href="#contact" class="btn-outline" id="heroContactBtn">Me contacter</a>
+      </div>
+
+      <div class="hero-meta reveal-up">
+        <span class="meta-item">📍 Paris, France</span>
+        <span class="meta-sep">—</span>
+        <span class="meta-item">🎓 IPSSI Paris</span>
+        <span class="meta-sep">—</span>
+        <span class="meta-item">🚀 BTS SIO SLAM</span>
+      </div>
+
+    </div>
+
+    <div class="hero-deco" aria-hidden="true">
+      <div class="deco-grid"></div>
+      <div class="deco-circle c1"></div>
+      <div class="deco-circle c2"></div>
+      <div class="deco-bar b1"></div>
+      <div class="deco-bar b2"></div>
+      <div class="deco-bar b3"></div>
+    </div>
+
+    <a href="#about" class="hero-scroll" aria-label="Défiler">
+      <span class="scroll-track"><span class="scroll-thumb"></span></span>
+    </a>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-intro reveal-up">
+        <span class="section-num">01</span>
+        <h2 class="section-title">À propos</h2>
+      </div>
+
+      <div class="about-layout">
+        <div class="about-text reveal-left">
+          <p>
+            Passionné par les technologies de l'information, je suis étudiant en
+            <mark>BTS SIO option SLAM</mark> à l'<mark>IPSSI Paris</mark>.
+            Mon parcours m'a amené à explorer les domaines de la <mark>Data</mark>,
+            de l'<mark>Intelligence Artificielle</mark> et du <mark>Business Intelligence</mark>.
+          </p>
+          <p>
+            Au sein de la <mark>DSI de Metro France</mark>, j'ai participé à des projets
+            stratégiques de valorisation des données et d'aide à la décision —
+            une expérience fondatrice qui a ancré ma conviction que la donnée est
+            au cœur de la transformation numérique.
+          </p>
+          <p>
+            Curieux, rigoureux et en veille constante, je cherche à apporter de la valeur
+            là où les données font la différence.
+          </p>
+        </div>
+
+        <div class="about-cards reveal-right">
+          <div class="about-kpi">
+            <div class="kpi">
+              <strong>2025</strong>
+              <span>Début BTS</span>
+            </div>
+            <div class="kpi">
+              <strong>1</strong>
+              <span>Stage réalisé</span>
+            </div>
+            <div class="kpi">
+              <strong>∞</strong>
+              <span>Curiosité</span>
+            </div>
+          </div>
+
+          <div class="code-card">
+            <div class="code-header">
+              <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+              <span class="code-fname">profil.json</span>
+            </div>
+            <pre class="code-body"><code id="typeCode"></code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-intro reveal-up">
+        <span class="section-num">02</span>
+        <h2 class="section-title">Compétences</h2>
+      </div>
+
+      <div class="skills-layout">
+        <div class="skill-col reveal-left">
+          <div class="skill-block">
+            <div class="sb-head">
+              <span class="sb-icon">⬡</span>
+              <h3>Data &amp; IA</h3>
+            </div>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">NumPy</span>
+              <span class="tag">Machine Learning</span>
+            </div>
+          </div>
+          <div class="skill-block">
+            <div class="sb-head">
+              <span class="sb-icon">⬡</span>
+              <h3>Business Intelligence</h3>
+            </div>
+            <div class="tags">
+              <span class="tag">Power BI</span>
+              <span class="tag">SQL</span>
+              <span class="tag">ETL</span>
+              <span class="tag">Data Viz</span>
+              <span class="tag">Reporting</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-col reveal-right">
+          <div class="skill-block">
+            <div class="sb-head">
+              <span class="sb-icon">⬡</span>
+              <h3>Développement</h3>
+            </div>
+            <div class="tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">React</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">HTML / CSS</span>
+              <span class="tag">PHP</span>
+              <span class="tag">Git</span>
+            </div>
+          </div>
+          <div class="skill-block">
+            <div class="sb-head">
+              <span class="sb-icon">⬡</span>
+              <h3>Bases de données</h3>
+            </div>
+            <div class="tags">
+              <span class="tag">MySQL</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">Modélisation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bars-section reveal-up">
+        <div class="bar-row">
+          <div class="bar-info"><span>Python / Data</span><span>75%</span></div>
+          <div class="bar-track">
+            <div class="bar-fill" data-w="75"></div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-info"><span>Power BI / SQL</span><span>70%</span></div>
+          <div class="bar-track">
+            <div class="bar-fill" data-w="70"></div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-info"><span>JavaScript / React</span><span>65%</span></div>
+          <div class="bar-track">
+            <div class="bar-fill" data-w="65"></div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-info"><span>Machine Learning</span><span>60%</span></div>
+          <div class="bar-track">
+            <div class="bar-fill" data-w="60"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-intro reveal-up">
+        <span class="section-num">03</span>
+        <h2 class="section-title">Expérience</h2>
+      </div>
+
+      <div class="xp-card reveal-up">
+        <div class="xp-left">
+          <div class="xp-period">2025 – 2026</div>
+          <div class="xp-badge">Stage</div>
+        </div>
+        <div class="xp-right">
+          <div class="xp-company">Metro France</div>
+          <div class="xp-dept">DSI · Pôle Data, IA &amp; BI</div>
+          <h3 class="xp-title">Stagiaire — Data / IA / Business Intelligence</h3>
+          <p class="xp-desc">
+            Immersion au sein de la Direction des Systèmes d'Information de Metro France,
+            dans le pôle Data, Intelligence Artificielle et Business Intelligence.
+            Participation à des projets stratégiques autour de la valorisation des données
+            et de l'aide à la décision pour des équipes métiers.
+          </p>
+          <ul class="xp-list">
+            <li>Analyse et visualisation de données métier via Power BI</li>
+            <li>Contribution à des projets d'IA et de traitement de données</li>
+            <li>Mise en place de pipelines de données et de rapports BI</li>
+          </ul>
+          <div class="xp-tags">
+            <span class="xtag">Python</span>
+            <span class="xtag">Power BI</span>
+            <span class="xtag">SQL</span>
+            <span class="xtag">Machine Learning</span>
+            <span class="xtag">ETL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section section-alt" id="education">
+    <div class="container">
+      <div class="section-intro reveal-up">
+        <span class="section-num">04</span>
+        <h2 class="section-title">Formation</h2>
+      </div>
+
+      <div class="edu-list">
+        <div class="edu-item reveal-left">
+          <div class="edu-meta">
+            <span class="edu-year">2025 – 2026</span>
+            <span class="edu-status status-active">En cours</span>
+          </div>
+          <div class="edu-body">
+            <div class="edu-school">IPSSI Paris</div>
+            <div class="edu-degree">BTS SIO &middot; Option SLAM</div>
+            <p class="edu-desc">
+              Services Informatiques aux Organisations — Solutions Logicielles et Applications Métiers.
+              Formation axée sur le développement d'applications, l'algorithmique et les bases de données.
+            </p>
+            <div class="tags">
+              <span class="tag tag-sm">Développement</span>
+              <span class="tag tag-sm">Algorithmique</span>
+              <span class="tag tag-sm">Bases de données</span>
+              <span class="tag tag-sm">Réseau</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-item reveal-left" style="--delay:.12s">
+          <div class="edu-meta">
+            <span class="edu-year">2025</span>
+            <span class="edu-status status-done">Obtenu</span>
+          </div>
+          <div class="edu-body">
+            <div class="edu-school">Lycée</div>
+            <div class="edu-degree">Baccalauréat</div>
+            <p class="edu-desc">Enseignements technologiques et scientifiques.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="ipssi-band reveal-up">
+        <div class="ipssi-text">
+          <strong>École informatique, cybersécurité et IA - IPSSI Paris</strong>
+          <p>École d'informatique parisienne reconnue pour ses formations professionnalisantes et son approche terrain.
+          </p>
+        </div>
+        <div class="ipssi-nums">
+          <div class="ipssi-n"><strong>Paris</strong><span>Localisation</span></div>
+          <div class="ipssi-n"><strong>BAC+2</strong><span>Niveau</span></div>
+          <div class="ipssi-n"><strong>SLAM</strong><span>Option</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-intro reveal-up">
+        <span class="section-num">05</span>
+        <h2 class="section-title">Contact</h2>
+      </div>
+
+      <div class="contact-layout">
+        <div class="contact-left reveal-left">
+          <p class="contact-lead">
+            Ouvert à toute opportunité de stage, d'alternance ou de collaboration.
+            N'hésitez pas à me contacter !
+          </p>
+          <div class="clinks">
+            <a href="mailto:dalilbounar@gmail.com" class="clink" id="emailLink">
+              <div class="clink-icon">✉</div>
+              <div class="clink-body">
+                <div class="clink-label">Email</div>
+                <div class="clink-val">dalilbounar@gmail.com</div>
+              </div>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+            <a href="https://linkedin.com/in/" target="_blank" class="clink" id="linkedinLink">
+              <div class="clink-icon">in</div>
+              <div class="clink-body">
+                <div class="clink-label">LinkedIn</div>
+                <div class="clink-val">linkedin.com/in/</div>
+              </div>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+            <a href="https://github.com/type1101" target="_blank" class="clink" id="githubLink">
+              <div class="clink-icon">gh</div>
+              <div class="clink-body">
+                <div class="clink-label">GitHub</div>
+                <div class="clink-val">github.com/type1101</div>
+              </div>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-right reveal-right">
+          <form id="contactForm" onsubmit="handleForm(event)" class="cform">
+            <div class="fgroup">
+              <label for="fName">Nom complet</label>
+              <input type="text" id="fName" name="name" placeholder="Votre nom" required />
+            </div>
+            <div class="fgroup">
+              <label for="fEmail">Email</label>
+              <input type="email" id="fEmail" name="email" placeholder="votre@email.com" required />
+            </div>
+            <div class="fgroup">
+              <label for="fSubject">Objet</label>
+              <input type="text" id="fSubject" name="subject" placeholder="Stage, alternance, collaboration…" />
+            </div>
+            <div class="fgroup">
+              <label for="fMsg">Message</label>
+              <textarea id="fMsg" name="message" rows="4" placeholder="Votre message…" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary btn-full" id="submitBtn">
+              <span>Envoyer</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z" />
+              </svg>
+            </button>
+            <div class="form-ok" id="formOk">✓ Message envoyé, merci !</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="footer-logo">Dalil<span class="logo-dot">.</span></span>
+      <span class="footer-copy">© 2026 Dalil Bounar &mdash; Paris 🗼</span>
+      <div class="footer-nav">
+        <a href="#hero">Accueil</a>
+        <a href="#experience">Expérience</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
