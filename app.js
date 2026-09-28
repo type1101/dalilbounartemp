@@ -2,6 +2,34 @@
    DALIL BOUNAR — PORTFOLIO JS
    ============================================================ */
 
+// ── THÈME ─────────────────────────────────────────────────────
+// Applique le thème sauvegardé avant le premier rendu
+(function () {
+  const saved = localStorage.getItem('db-theme') || 'light';
+  if (saved === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+})();
+
+const themeToggle = document.getElementById('themeToggle');
+
+themeToggle.addEventListener('click', () => {
+  const html   = document.documentElement;
+  const isDark = html.getAttribute('data-theme') === 'dark';
+
+  // Active la transition globale douce uniquement pendant le switch
+  html.classList.add('theme-switching');
+
+  if (isDark) {
+    html.removeAttribute('data-theme');
+    localStorage.setItem('db-theme', 'light');
+  } else {
+    html.setAttribute('data-theme', 'dark');
+    localStorage.setItem('db-theme', 'dark');
+  }
+
+  // Retire la classe après la fin de la transition (400ms)
+  setTimeout(() => html.classList.remove('theme-switching'), 400);
+});
+
 // ── NAVBAR ────────────────────────────────────────────────────
 const navbar = document.getElementById('navbar');
 

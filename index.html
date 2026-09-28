@@ -24,9 +24,24 @@
         <li><a href="#watch"      class="nav-link">Veille techno</a></li>
         <li><a href="#contact"    class="nav-link nav-cta">Contact</a></li>
       </ul>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-right">
+        <button class="theme-toggle" id="themeToggle" aria-label="Changer de thème" title="Changer de thème">
+          <!-- Icône soleil (thème clair) -->
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/>
+            <line x1="4.22" y1="4.22" x2="7.05" y2="7.05"/><line x1="16.95" y1="16.95" x2="19.78" y2="19.78"/>
+            <line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="7.05" y2="16.95"/><line x1="16.95" y1="7.05" x2="19.78" y2="4.22"/>
+          </svg>
+          <!-- Icône lune (thème sombre) -->
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
@@ -391,7 +406,7 @@
 
       <div class="watch-grid">
 
-        <!-- Article React 19 -->
+        <!-- Article React Compiler 2026 -->
         <article class="watch-card watch-card-main reveal-up">
           <div class="wc-top">
             <div class="wc-tech">
@@ -404,64 +419,68 @@
                 </svg>
               </span>
               <span class="wc-tech-name">React</span>
-              <span class="wc-version">v19</span>
+              <span class="wc-version">Compiler v1.0</span>
             </div>
-            <span class="wc-date">Décembre 2024</span>
+            <span class="wc-date">Septembre 2026</span>
           </div>
 
-          <h3 class="wc-title">React 19 — Les nouveautés majeures</h3>
+          <h3 class="wc-title">React Compiler 1.0 — Fini les re-renders inutiles</h3>
           <p class="wc-desc">
-            React 19 est la mise à jour la plus importante depuis React 18. Elle introduit
-            de nouveaux hooks, améliore la gestion des formulaires et rend les Server Components
-            officiellement stables.
+            Après deux ans de beta, le React Compiler (anciennement React Forget) atteint sa version 1.0 stable.
+            C'est l'une des avancées les plus importantes de l'écosystème React : le compilateur optimise
+            automatiquement les re-renders sans qu'on ait besoin d'écrire <code class="inline-code">useMemo</code>
+            ou <code class="inline-code">useCallback</code> manuellement.
           </p>
 
           <div class="wc-highlights">
             <div class="wc-highlight">
               <div class="wch-label">
                 <span class="wch-dot"></span>
-                <code>useActionState</code>
+                Mémoïsation automatique
               </div>
               <p class="wch-desc">
-                Nouveau hook qui simplifie la gestion des états liés aux actions (formulaires, mutations).
-                Il remplace l'ancienne combinaison <code>useReducer</code> + gestion manuelle des erreurs.
+                Le compilateur analyse le code et insère automatiquement les optimisations de mémoïsation.
+                Plus besoin de <code>useMemo()</code> ou <code>useCallback()</code> : c'est géré à la compilation.
+                Les performances s'améliorent sans changer une ligne de code.
               </p>
             </div>
             <div class="wc-highlight">
               <div class="wch-label">
                 <span class="wch-dot"></span>
-                <code>useOptimistic</code>
+                Compatible React 19 &amp; Server Components
               </div>
               <p class="wch-desc">
-                Permet d'afficher une mise à jour "optimiste" de l'UI avant que le serveur confirme l'action —
-                idéal pour les interfaces réactives et les applications temps réel.
+                Le Compiler fonctionne de pair avec les React Server Components et les Actions introduits
+                dans React 19. Il détecte intelligemment les composants serveur et ne les optimise
+                que côté client.
               </p>
             </div>
             <div class="wc-highlight">
               <div class="wch-label">
                 <span class="wch-dot"></span>
-                Server Components stables
+                Intégration Vite &amp; Next.js native
               </div>
               <p class="wch-desc">
-                Les React Server Components (RSC) passent en version stable. Ils permettent de rendre
-                des composants côté serveur, réduisant la quantité de JavaScript envoyée au client.
+                Des plugins officiels pour <code>Vite</code> et <code>Next.js 15+</code> sont disponibles.
+                L'activation se fait en une ligne dans la config — aucune migration de code nécessaire.
               </p>
             </div>
             <div class="wc-highlight">
               <div class="wch-label">
                 <span class="wch-dot"></span>
-                <code>use()</code> — nouveau hook universel
+                Mode ESLint — détection des règles violées
               </div>
               <p class="wch-desc">
-                Le hook <code>use()</code> permet de lire des Promises ou des Contexts directement
-                dans le rendu d'un composant, simplifiant la gestion asynchrone.
+                Un plugin ESLint accompagne le Compiler et signale les patterns incompatibles
+                (mutations directes d'état, effets de bord dans le rendu...) avant même que
+                le build échoue.
               </p>
             </div>
           </div>
 
           <div class="wc-footer">
-            <span class="wc-source">Source : react.dev &middot; Blog officiel React</span>
-            <a href="https://react.dev/blog/2024/12/05/react-19" target="_blank" class="wc-link">
+            <span class="wc-source">Source : react.dev &middot; Blog officiel React · Septembre 2026</span>
+            <a href="https://react.dev/learn/react-compiler" target="_blank" class="wc-link">
               Lire l'article
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
             </a>

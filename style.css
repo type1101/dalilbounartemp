@@ -1331,6 +1331,21 @@ img { max-width: 100%; display: block; }
   color: var(--ink);
 }
 
+/* Code inline dans les paragraphes de description */
+.wc-desc .inline-code,
+.wc-desc code {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  background: rgba(97,218,251,0.08);
+  border: 1px solid rgba(97,218,251,0.2);
+  border-radius: 4px;
+  padding: 0.1em 0.45em;
+  color: #21a1c4;
+}
+
+[data-theme="dark"] .wc-desc .inline-code,
+[data-theme="dark"] .wc-desc code { background: rgba(6,182,212,0.1); border-color: rgba(6,182,212,0.25); color: var(--amber-lt); }
+
 .wc-footer {
   display: flex;
   align-items: center;
@@ -1424,4 +1439,317 @@ img { max-width: 100%; display: block; }
   .wc-top { flex-direction: column; align-items: flex-start; }
   .watch-sidebar { flex-direction: column; }
   .hero-chips { gap: 0.4rem; }
+}
+
+/* ── NAV RIGHT GROUP ──────────────────────────────────────── */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ── THEME TOGGLE BUTTON ──────────────────────────────────── */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px; height: 38px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--white);
+  color: var(--charcoal);
+  cursor: pointer;
+  transition: var(--tr);
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+  border-color: var(--amber);
+  background: var(--amber-bg);
+  color: var(--amber);
+  transform: rotate(20deg);
+}
+
+/* Show sun in dark mode, moon in light mode */
+.icon-sun  { display: none; }
+.icon-moon { display: block; }
+
+[data-theme="dark"] .icon-sun  { display: block; }
+[data-theme="dark"] .icon-moon { display: none; }
+
+/* ── CHIP HOVER EFFECTS (hero) ────────────────────────────── */
+.chip {
+  cursor: default;
+  transition: background 0.25s ease, border-color 0.25s ease,
+              color 0.25s ease, transform 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.chip:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.95);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+}
+
+.chip-alt {
+  transition: background 0.25s ease, border-color 0.25s ease,
+              color 0.25s ease, transform 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.chip-alt:hover {
+  background: rgba(217,119,6,0.35);
+  border-color: var(--amber-lt);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(217,119,6,0.3);
+}
+
+/* ════════════════════════════════════════════════════════════
+   THÈME SOMBRE — dark mode ( data-theme="dark" sur <html> )
+   Palette: Midnight Navy + Electric Cyan
+   ════════════════════════════════════════════════════════════ */
+[data-theme="dark"] {
+  --cream:    #0d1528;
+  --white:    #111827;
+  --charcoal: #f1f5f9;
+  --ink:      #e2e8f0;
+  --muted:    #64748b;
+  --border:   #1e3a5f;
+  --amber:    #06b6d4;
+  --amber-lt: #22d3ee;
+  --amber-bg: rgba(6,182,212,0.12);
+  --shadow:   0 2px 16px rgba(0,0,0,0.35);
+  --shadow-md:0 8px 40px rgba(0,0,0,0.5);
+}
+
+/* ── Body & base en dark ──────────────────────────────────── */
+[data-theme="dark"] body {
+  background: var(--white);
+  color: var(--ink);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-track { background: var(--cream); }
+
+/* ── Navbar en dark ───────────────────────────────────────── */
+[data-theme="dark"] .navbar.scrolled {
+  background: rgba(17,24,39,0.92);
+  box-shadow: 0 1px 0 var(--border);
+}
+
+[data-theme="dark"] .nav-logo { color: var(--charcoal); }
+
+[data-theme="dark"] .nav-link { color: var(--muted); }
+[data-theme="dark"] .nav-link:hover { color: var(--charcoal); background: var(--cream); }
+
+[data-theme="dark"] .nav-cta {
+  background: var(--amber) !important;
+  color: #0a0a0a !important;
+}
+[data-theme="dark"] .nav-cta:hover { background: var(--amber-lt) !important; }
+
+[data-theme="dark"] .hamburger span { background: var(--charcoal); }
+
+[data-theme="dark"] .theme-toggle {
+  background: var(--cream);
+  border-color: var(--border);
+  color: var(--charcoal);
+}
+[data-theme="dark"] .theme-toggle:hover {
+  border-color: var(--amber);
+  background: rgba(6,182,212,0.12);
+  color: var(--amber);
+}
+
+/* ── Scrollbar ────────────────────────────────────────────── */
+[data-theme="dark"] ::-webkit-scrollbar-track { background: #0a0f1a; }
+[data-theme="dark"] ::-webkit-scrollbar-thumb { background: var(--amber); }
+
+/* ── Hero en dark (reste sombre, juste teinte différente) ── */
+[data-theme="dark"] .hero { background: #060d1a; }
+
+[data-theme="dark"] .deco-circle { border-color: rgba(6,182,212,0.08); }
+[data-theme="dark"] .c2 { border-color: rgba(6,182,212,0.15); }
+[data-theme="dark"] .deco-bar {
+  background: linear-gradient(to right, transparent, rgba(6,182,212,0.5), transparent);
+}
+
+/* ── Sections en dark ─────────────────────────────────────── */
+[data-theme="dark"] .section { background: #111827; }
+[data-theme="dark"] .section-alt { background: #0d1528; }
+
+/* ── Section titles ──────────────────────────────────────── */
+[data-theme="dark"] .section-title { color: var(--charcoal); }
+[data-theme="dark"] .section-num   { color: var(--amber); }
+
+/* ── About ────────────────────────────────────────────────── */
+[data-theme="dark"] .about-text p  { color: var(--muted); }
+[data-theme="dark"] .about-text mark { color: var(--charcoal); }
+
+[data-theme="dark"] .about-kpi { border-color: var(--border); }
+[data-theme="dark"] .kpi { border-color: var(--border); }
+[data-theme="dark"] .kpi strong { color: var(--charcoal); }
+[data-theme="dark"] .kpi span   { color: var(--muted); }
+
+/* ── Code card (déjà sombre, juste ajuste) ─────────────────── */
+[data-theme="dark"] .code-card { border-color: var(--border); background: #0a0f1a; }
+[data-theme="dark"] .code-header { background: rgba(6,182,212,0.04); border-bottom-color: var(--border); }
+[data-theme="dark"] .code-fname  { color: rgba(255,255,255,0.3); }
+
+/* ── Block labels ────────────────────────────────────────── */
+[data-theme="dark"] .bts-label   { background: rgba(6,182,212,0.06); border-color: rgba(6,182,212,0.2); }
+[data-theme="dark"] .stage-label { background: rgba(139,92,246,0.06); border-color: rgba(139,92,246,0.2); }
+[data-theme="dark"] .bl-title    { color: var(--charcoal); }
+
+/* ── Skill blocks ────────────────────────────────────────── */
+[data-theme="dark"] .skill-block {
+  background: #1a2438;
+  border-color: var(--border);
+}
+[data-theme="dark"] .skill-block:hover {
+  border-color: var(--amber);
+  background: #1e2d45;
+  box-shadow: 0 4px 20px rgba(6,182,212,0.1);
+}
+[data-theme="dark"] .sb-head h3   { color: var(--charcoal); }
+[data-theme="dark"] .sb-icon      { color: var(--amber); }
+
+[data-theme="dark"] .skill-block-stage         { background: rgba(139,92,246,0.06); border-color: rgba(139,92,246,0.15) !important; }
+[data-theme="dark"] .skill-block-stage:hover   { background: rgba(139,92,246,0.1) !important; border-color: rgba(139,92,246,0.35) !important; }
+
+/* ── Tags ────────────────────────────────────────────────── */
+[data-theme="dark"] .tag {
+  background: #1a2438;
+  border-color: var(--border);
+  color: var(--muted);
+}
+[data-theme="dark"] .tag:hover {
+  background: rgba(6,182,212,0.12);
+  border-color: var(--amber);
+  color: var(--charcoal);
+}
+
+/* ── Séparateur skills ───────────────────────────────────── */
+[data-theme="dark"] .sep-line   { background: var(--border); }
+[data-theme="dark"] .sep-label  { background: #1a2438; border-color: var(--border); color: var(--muted); }
+
+/* ── Barres de compétences ───────────────────────────────── */
+[data-theme="dark"] .bars-section { background: #1a2438; border-color: var(--border); }
+[data-theme="dark"] .bar-info     { color: var(--charcoal); }
+[data-theme="dark"] .bar-info span:last-child { color: var(--muted); }
+[data-theme="dark"] .bar-track    { background: #2a3a55; }
+[data-theme="dark"] .bar-fill[data-type="bts"]   { background: var(--amber); }
+[data-theme="dark"] .bar-fill[data-type="stage"] { background: #8b5cf6; }
+[data-theme="dark"] .bts-sep   { color: var(--amber); }
+[data-theme="dark"] .stage-sep { color: #8b5cf6; }
+
+/* ── Expérience ──────────────────────────────────────────── */
+[data-theme="dark"] .xp-card        { background: #1a2438; border-color: var(--border); }
+[data-theme="dark"] .xp-card::before{ background: var(--amber); }
+[data-theme="dark"] .xp-card:hover  { box-shadow: 0 8px 40px rgba(6,182,212,0.12); }
+[data-theme="dark"] .xp-company     { color: var(--charcoal); }
+[data-theme="dark"] .xp-dept        { color: var(--muted); }
+[data-theme="dark"] .xp-title       { color: var(--amber); }
+[data-theme="dark"] .xp-desc        { color: var(--muted); }
+[data-theme="dark"] .xp-list li     { color: var(--ink); }
+[data-theme="dark"] .xp-list li::marker { color: var(--amber); }
+[data-theme="dark"] .xp-period      { color: var(--muted); }
+[data-theme="dark"] .xp-badge {
+  background: rgba(6,182,212,0.12);
+  border-color: rgba(6,182,212,0.3);
+  color: var(--amber);
+}
+[data-theme="dark"] .xtag { background: #1a2438; border-color: var(--border); color: var(--muted); }
+
+/* ── Formation ───────────────────────────────────────────── */
+[data-theme="dark"] .edu-item       { border-color: var(--border); }
+[data-theme="dark"] .edu-item:first-child { border-top-color: var(--border); }
+[data-theme="dark"] .edu-item:hover { background: rgba(6,182,212,0.03); }
+[data-theme="dark"] .edu-school     { color: var(--charcoal); }
+[data-theme="dark"] .edu-degree     { color: var(--amber); }
+[data-theme="dark"] .edu-desc       { color: var(--muted); }
+[data-theme="dark"] .edu-year       { color: var(--muted); }
+[data-theme="dark"] .status-active  { background: rgba(6,182,212,0.1); border-color: rgba(6,182,212,0.3); color: var(--amber); }
+
+[data-theme="dark"] .ipssi-band { background: #060d1a; }
+[data-theme="dark"] .ipssi-text strong { color: var(--charcoal); }
+[data-theme="dark"] .ipssi-text p      { color: rgba(255,255,255,0.4); }
+[data-theme="dark"] .ipssi-n strong    { color: var(--amber); }
+[data-theme="dark"] .ipssi-n span      { color: rgba(255,255,255,0.3); }
+
+/* ── Veille techno ───────────────────────────────────────── */
+[data-theme="dark"] .watch-intro { color: var(--muted); }
+
+[data-theme="dark"] .watch-card         { background: #1a2438; border-color: var(--border); }
+[data-theme="dark"] .watch-card:hover   { box-shadow: 0 8px 40px rgba(6,182,212,0.12); }
+[data-theme="dark"] .wc-title           { color: var(--charcoal); }
+[data-theme="dark"] .wc-desc            { color: var(--muted); }
+[data-theme="dark"] .wc-tech-name       { color: var(--charcoal); }
+[data-theme="dark"] .wc-date            { color: var(--muted); }
+[data-theme="dark"] .wc-highlights      { border-top-color: var(--border); }
+[data-theme="dark"] .wc-highlight       { border-bottom-color: var(--border); }
+[data-theme="dark"] .wch-label          { color: var(--charcoal); }
+[data-theme="dark"] .wch-desc           { color: var(--muted); }
+[data-theme="dark"] .wch-desc code      { background: #0d1528; border-color: var(--border); color: var(--ink); }
+[data-theme="dark"] .wc-footer          { background: #0d1528; border-top-color: var(--border); }
+[data-theme="dark"] .wc-source          { color: var(--muted); }
+[data-theme="dark"] .wc-link            { color: var(--charcoal); border-bottom-color: var(--amber); }
+[data-theme="dark"] .wc-link:hover      { color: var(--amber); }
+
+[data-theme="dark"] .watch-side-block   { background: #1a2438; border-color: var(--border); }
+[data-theme="dark"] .wsb-title          { color: var(--muted); }
+[data-theme="dark"] .wsb-item           { border-color: var(--border); }
+[data-theme="dark"] .wsb-item:hover     { border-color: var(--amber); background: rgba(6,182,212,0.08); }
+[data-theme="dark"] .wsb-name           { color: var(--charcoal); }
+[data-theme="dark"] .wsb-tag            { color: var(--muted); }
+[data-theme="dark"] .src-tag            { background: #0d1528; border-color: var(--border); color: var(--muted); }
+
+/* ── Contact ─────────────────────────────────────────────── */
+[data-theme="dark"] .contact-lead { color: var(--muted); }
+
+[data-theme="dark"] .clink             { background: #1a2438; border-color: var(--border); }
+[data-theme="dark"] .clink:hover       { border-color: var(--amber); background: rgba(6,182,212,0.08); }
+[data-theme="dark"] .clink-icon        { background: #0d1528; border-color: var(--border); color: var(--charcoal); }
+[data-theme="dark"] .clink-label       { color: var(--muted); }
+[data-theme="dark"] .clink-val         { color: var(--charcoal); }
+[data-theme="dark"] .clink svg         { color: var(--muted); }
+[data-theme="dark"] .clink:hover svg   { color: var(--amber); }
+
+[data-theme="dark"] .fgroup label      { color: var(--muted); }
+[data-theme="dark"] .fgroup input,
+[data-theme="dark"] .fgroup textarea   { background: #1a2438; border-color: var(--border); color: var(--charcoal); }
+[data-theme="dark"] .fgroup input::placeholder,
+[data-theme="dark"] .fgroup textarea::placeholder { color: #374151; }
+[data-theme="dark"] .fgroup input:focus,
+[data-theme="dark"] .fgroup textarea:focus { border-color: var(--amber); box-shadow: 0 0 0 3px rgba(6,182,212,0.15); }
+
+/* ── Mobile nav en dark ──────────────────────────────────── */
+[data-theme="dark"] .nav-links {
+  background: rgba(17,24,39,0.98);
+  border-bottom-color: var(--border);
+}
+
+/* ── Footer en dark ──────────────────────────────────────── */
+[data-theme="dark"] .footer         { background: #060d1a; }
+[data-theme="dark"] .footer-logo    { color: var(--charcoal); }
+[data-theme="dark"] .footer-copy    { color: rgba(255,255,255,0.3); }
+[data-theme="dark"] .footer-nav a   { color: rgba(255,255,255,0.3); }
+[data-theme="dark"] .footer-nav a:hover { color: var(--amber-lt); }
+
+/* ── Transition thème — UNIQUEMENT pendant le switch ────────
+   Activée par JS pendant 400ms via la classe .theme-switching
+   sur <html>. Jamais active en permanence pour préserver les
+   animations hover, scroll-reveal et keyframes.
+   ─────────────────────────────────────────────────────────── */
+html.theme-switching,
+html.theme-switching *,
+html.theme-switching *::before,
+html.theme-switching *::after {
+  transition:
+    background-color 0.35s ease,
+    border-color     0.35s ease,
+    color            0.35s ease,
+    box-shadow       0.35s ease !important;
 }
