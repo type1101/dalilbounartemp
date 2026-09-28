@@ -1,6 +1,5 @@
 /* ============================================================
    DALIL BOUNAR — PORTFOLIO JS
-   Rewritten: no custom cursor, no parallax bug
    ============================================================ */
 
 // ── NAVBAR ────────────────────────────────────────────────────
@@ -75,18 +74,21 @@ setInterval(() => {
 // ── TYPEWRITER ────────────────────────────────────────────────
 const lines = [
   '{',
-  '  "name":     "Dalil Bounar",',
-  '  "location": "Paris, France",',
-  '  "school":   "IPSSI Paris",',
-  '  "level":    "BTS SIO SLAM",',
-  '  "focus": [',
-  '    "Data", "IA", "BI"',
+  '  "nom":       "Dalil Bounar",',
+  '  "ville":     "Paris, France",',
+  '  "formation": "BTS SIO SLAM",',
+  '  "ecole":     "IPSSI Paris",',
+  '  "promo":     "2024 – 2026",',
+  '  "stack_bts": [',
+  '    "HTML/CSS", "JavaScript",',
+  '    "PHP", "SQL", "Python"',
   '  ],',
-  '  "stack": [',
-  '    "Python", "Power BI",',
-  '    "SQL", "JavaScript"',
-  '  ],',
-  '  "status": "Open to work 🚀"',
+  '  "stage": {',
+  '    "entreprise": "Metro France",',
+  '    "domaine":    "DSI – Data / BI"',
+  '  },',
+  '  "veille":  ["React", "Node.js"],',
+  '  "statut":  "Disponible 🚀"',
   '}',
 ];
 
